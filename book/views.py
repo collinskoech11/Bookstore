@@ -13,6 +13,18 @@ class BookList(APIView):
         serializer = BookSerializer(books, many=True)
         return Response(serializer.data)
 
+class AuthorBookList(APIView):
+     def get(self, request,pk):
+        books = Book.objects.filter(Author=pk)
+        serializer = BookSerializer(books, many=True)
+        return Response(serializer.data)
+
+class YearBookList(APIView):
+    def get(self, request,pk):
+        books = Book.objects.filter(year=pk)
+        serializer = BookSerializer(books, many=True)
+        return Response(serializer.data)
+
 class BookCreate(APIView):
     def post(self, request):
         serializer = BookSerializer(data=request.data, many=True)
@@ -41,10 +53,10 @@ class BookEdit(APIView):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def delete(self, request, pk):
-        book = self.get_object(pk)
-        book.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+    # def delete(self, request, pk):
+    #     book = self.get_object(pk)
+    #     book.delete()
+    #     return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 
@@ -83,8 +95,8 @@ class AuthorEdit(APIView):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def delete(self, request, pk):
-        author = self.get_object(pk)
-        author.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+    # def delete(self, request, pk):
+    #     author = self.get_object(pk)
+    #     author.delete()
+    #     return Response(status=status.HTTP_204_NO_CONTENT)
 
