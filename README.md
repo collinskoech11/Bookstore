@@ -25,26 +25,25 @@
 
 ![clone from github](./resources/gitclone.png "Title")
 
-#### install python3 & pip
-`sudo apt-get install python3`
+![install python](./resources/installpython.png "Title")
 
-#### install virtualenv
-`pip install virtualenv`
 
-#### create a virtual environment inside the root folder of the project
-`virtualenv env`
+![install virtualenv](./resources/installvirtualenv.png "Title")
 
-#### activate the virtual environment
-`source env/bin/activate`
 
-#### install the dependencies listed in requirements.txt
-`pip install -r requirements.txt`
+![create virtual environment](./resources/createvirtualenv.png "Title")
 
-#### run database migrations
-`python manage.py makemigrations && python manage.py migrate`
 
-#### create a superuser account
-`python manage.py createsuperuser`
+![activate virtualenv](./resources/activatevirtualenv.png "Title")
+
+
+![install dependencies](./resources/installdependencies.png "Title")
+
+
+![db migrations](./resources/dbmigrations.png "Title")
+
+
+![create superuser](./resources/createsuperuser.png "Title")
 
 
 
