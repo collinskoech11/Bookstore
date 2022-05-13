@@ -23,8 +23,7 @@
 
 ## How to run the Bookstore server 
 
-#### Clone the repository from github
-`git clone https://github.com/collinskoech/Bookstore.git`
+![clone from github](./resources/gitclone.png "Title")
 
 #### install python3 & pip
 `sudo apt-get install python3`
