@@ -1,28 +1,28 @@
 # Bookstore
 How to run the application
 
-Clone the repository from github
+#### Clone the repository from github
 `git clone https://github.com/collinskoech/Bookstore.git`
 
-install python3 & pip
+#### install python3 & pip
 `sudo apt-get install python3`
 
-install virtualenv
+#### install virtualenv
 `pip install virtualenv`
 
-create a virtual environment inside the root folder of the project
+#### create a virtual environment inside the root folder of the project
 `virtualenv env`
 
-activate the virtual environment
+#### activate the virtual environment
 `source env/bin/activate`
 
-install the dependencies listed in requirements.txt
+#### install the dependencies listed in requirements.txt
 `pip install -r requirements.txt`
 
-run database migrations
+#### run database migrations
 `python manage.py makemigrations && python manage.py migrate`
 
-create a superuser account
+#### create a superuser account
 `python manage.py createsuperuser`
 
 
