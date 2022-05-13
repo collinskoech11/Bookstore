@@ -51,10 +51,49 @@
 ## How to access the endpoints
 
 run the sever
-`python manage.py runserver`
 
 ![run server](./resources/runserver.png "Title")
 
 
+### endpoints
 
+get all books
+
+![all books](./resources/books.png "Title")
+
+create a new book
+
+![new books](./resources/newbook.png "Title")
+
+get book with specific id
+
+![specific book](./resources/singlebook.png "Title")
+
+edit book with specific id
+
+![edit book](./resources/Editbook.png "Title")
+
+get books from a specific author
+
+![author specific book](./resources/Editbook.png "Title")
+
+get books published in a specific year
+
+![books of a specific year](./resources/yearbook.png "Title")
+
+get all authors
+
+![all authors](./resources/authors.png "Title")
+
+get author with specific id
+
+![single authors](./resources/singleauthor.png "Title")
+
+add a new author
+
+![new author](./resources/newauthor.png "Title")
+
+EditAuthor
+
+![edit author](./resources/editauthor.png "Title")
 
