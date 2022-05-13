@@ -51,8 +51,9 @@
 ## How to access the endpoints
 
 run the sever
-`poython manage.py runserver`
+`python manage.py runserver`
 
+![run server](./resources/runserver.png "Title")
 
 
 

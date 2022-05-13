@@ -11,3 +11,4 @@ class modelTest(TestCase):
 
         booksample = Book(title='The World of geography', Author=1, year=2013, description='sample', quantity='2')
         booksample.save()
+        print(booksample)
