@@ -25,6 +25,8 @@
 
 ![clone from github](./resources/gitclone.png "Title")
 
+![navigate](./resources/navigate.png "Title")
+
 ![install python](./resources/installpython.png "Title")
 
 
@@ -44,7 +46,6 @@
 
 
 ![create superuser](./resources/superuser.png "Title")
-
 
 
 ## How to access the endpoints
