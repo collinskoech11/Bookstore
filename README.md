@@ -37,13 +37,13 @@
 ![activate virtualenv](./resources/activatevirtualenv.png "Title")
 
 
-![install dependencies](./resources/installdependencies.png "Title")
+![install dependencies](./resources/installdependecies.png "Title")
 
 
 ![db migrations](./resources/dbmigrations.png "Title")
 
 
-![create superuser](./resources/createsuperuser.png "Title")
+![create superuser](./resources/superuser.png "Title")
 
 
 
