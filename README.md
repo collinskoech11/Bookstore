@@ -1,4 +1,4 @@
-# Bookstore
+# Bookstore Inventory Management System(Restful API)
 
 ## Database design 
 
