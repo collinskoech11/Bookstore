@@ -44,10 +44,25 @@ class BookDetail(APIView):
         serializer = BookSerializer(book)
         return Response(serializer.data)
 
+
 class BookEdit(APIView):
+    def get_object(self, pk):
+        try:
+            return Book.objects.get(pk=pk)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
     def put(self, request, pk):
         book = self.get_object(pk)
-        serializer = BookSerializer(Book, data=request.data)
+        serializer = BookSerializer(book, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class BookStockUpdate(APIView):
+    def put(self, request, pk):
+        book = self.get_object(pk=pk)
+        serializer = BookSerializer(book.quantity, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
@@ -87,9 +102,14 @@ class AuthorDetail(APIView):
         return Response(serializer.data)
 
 class AuthorEdit(APIView):
+    def get_object(self, pk):
+        try:
+            return Author.objects.get(pk=pk)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
     def put(self, request, pk):
-        author = self.get_object(pk)
-        serializer = AuthorSerializer(author, data=request.data)
+        authors = self.get_object(pk=pk)
+        serializer = AuthorSerializer(authors, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
