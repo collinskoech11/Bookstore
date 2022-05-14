@@ -59,15 +59,44 @@ class BookEdit(APIView):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class BookStockUpdate(APIView):
+class UpdateBook(APIView):
+    def get_object(self, pk):
+        try:
+            return Book.objects.get(pk=pk)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
     def put(self, request, pk):
-        book = self.get_object(pk=pk)
-        serializer = BookSerializer(book.quantity, data=request.data)
+        book = self.get_object(pk)
+        serializer = BookSerializer(book, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+class BookStockUpdate(APIView):
+    def get_object(self, pk):
+        try:
+            return Book.objects.get(pk=pk)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+    def patch(self, request, pk):
+        testmodel_object = self.get_object(pk)
+        serializer = BookSerializer(testmodel_object, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_202_ACCEPTED)
+        return Response(status=status.HTTP_400_BAD_REQUEST)
+    # def patch(self, request, pk, quantity):
+    #     book = self.get_object(Book, pk=pk)
+    #     data = {"quantity":book.quantity + int(quantity)}
+    #     serializer = BookSerializer(book, data=data, partial=True)
+
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data)
+
+    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
     # def delete(self, request, pk):
     #     book = self.get_object(pk)
     #     book.delete()
