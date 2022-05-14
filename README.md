@@ -75,7 +75,7 @@ edit book with specific id
 
 get books from a specific author
 
-![author specific book](./resources/Editbook.png "Title")
+![author specific book](./resources/authorsbook.png "Title")
 
 get books published in a specific year
 
