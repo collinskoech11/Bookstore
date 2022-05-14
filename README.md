@@ -97,3 +97,7 @@ EditAuthor
 
 ![edit author](./resources/editauthor.png "Title")
 
+Update stock quantity
+
+![update stock quantity](./resources/updatequantity.png "Title")
+
