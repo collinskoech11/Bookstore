@@ -57,47 +57,46 @@ run the sever
 
 ### endpoints
 
-get all books
+get all books. METHOD:GET
 
 ![all books](./resources/books.png "Title")
 
-create a new book
+create a new book.  METHOD:POST
 
 ![new books](./resources/newbook.png "Title")
 
-get book with specific id
+get book with specific id. METHOD:GET
 
 ![specific book](./resources/singlebook.png "Title")
 
-edit book with specific id
+edit book with specific id. METHOD:PUT
 
 ![edit book](./resources/Editbook.png "Title")
 
-get books from a specific author
-
+get books from a specific author. METHOD:GET
 ![author specific book](./resources/authorsbook.png "Title")
 
-get books published in a specific year
+get books published in a specific year. METHOD:GET
 
 ![books of a specific year](./resources/yearbook.png "Title")
 
-get all authors
+get all authors. METHOD:GET
 
 ![all authors](./resources/authors.png "Title")
 
-get author with specific id
+get author with specific id. METHOD:GET
 
 ![single authors](./resources/singleauthor.png "Title")
 
-add a new author
+add a new author. METHOD:POST
 
 ![new author](./resources/newauthor.png "Title")
 
-EditAuthor
+EditAuthor. METHOD:PUT
 
 ![edit author](./resources/editauthor.png "Title")
 
-Update stock quantity
+Update stock quantity. METHOD:PATCH
 
 ![update stock quantity](./resources/updatequantity.png "Title")
 
