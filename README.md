@@ -100,3 +100,9 @@ Update stock quantity. METHOD:PATCH
 
 ![update stock quantity](./resources/updatequantity.png "Title")
 
+
+Test Coverage
+
+![Test coverage](./resources/testcoverage.png "Title")
+
+

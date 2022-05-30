@@ -42,7 +42,7 @@ class BookDetail(APIView):
             return Book.objects.get(pk=pk)
         except:
             return Response(status=status.HTTP_404_NOT_FOUND)
-    def get(self, request, pk):
+    def get(self, pk):
         book = self.get_object(pk)
         serializer = BookSerializer(book)
         return Response(serializer.data)
